@@ -4,10 +4,19 @@ import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionService } from './mission.service';
 import { MissionSummaryComponent } from './mission-summary/mission-summary.component';
 import { MissionViewerComponent } from './mission-viewer/mission-viewer.component';
+import { RouterModule, Routes } from "@angular/router";
+
+const routes: Routes = [{ 
+    path: 'missions', children: [
+      { path: '', component: MissionListComponent},
+      { path: ':missionId', component: MissionViewerComponent}
+    ]
+  }];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
     MissionListComponent,
