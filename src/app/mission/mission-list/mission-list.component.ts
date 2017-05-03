@@ -20,4 +20,10 @@ export class MissionListComponent implements OnInit {
     this.missions = this.missionService.getMissions();
   }
 
+  handleRemove(removed: IMission) {
+    this.missions = this.missions.filter((mission: IMission) => {
+      return mission !== removed;
+    });
+  }
+
 }
