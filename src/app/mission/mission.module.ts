@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionService } from './mission.service';
 import { MissionSummaryComponent } from './mission-summary/mission-summary.component';
+import { MissionViewerComponent } from './mission-viewer/mission-viewer.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { MissionSummaryComponent } from './mission-summary/mission-summary.compo
   ],
   declarations: [
     MissionListComponent,
-    MissionSummaryComponent
+    MissionSummaryComponent,
+    MissionViewerComponent
   ],
   exports: [
     MissionListComponent
